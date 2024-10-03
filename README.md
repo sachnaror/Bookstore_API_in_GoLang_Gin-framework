@@ -1,6 +1,6 @@
 # 📚 Bookstore API 🛍️
 
-Welcome to the **Bookstore API**! Here, Bookstore API (in GoLang using Gin framework): you can manage your literary desires, from adding, edit, delete, deactivate the books to updating your favorite library. Get ready to unleash the power of books!
+Welcome to the **Bookstore API**! Here, Bookstore API (in GoLang using Gin framework): you can manage your literary desires, from adding, edit, delete, deactivate the books to updating your favorite library. 
 
 ```
 
