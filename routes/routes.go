@@ -13,4 +13,5 @@ func SetupRoutes(r *gin.Engine) {
 	r.POST("/books", controllers.CreateBook)    // To create a new book
 	r.PUT("/books/:id", controllers.EditBook)   // To edit an existing book
 	r.DELETE("/books/:id", controllers.DeleteBook) // To delete a book
+	r.POST("/books/:id/edit", controllers.EditBook) // Optional: to handle edit via POST
 }
