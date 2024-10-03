@@ -140,3 +140,8 @@ func DeleteBook(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"message": "Book deleted"})
 }
+
+func AdminDashboard(c *gin.Context) {
+    // You can return HTML or JSON. Here's an example of returning HTML.
+    c.HTML(http.StatusOK, "admin.html", nil) // Assuming you have a template named "admin.html"
+}

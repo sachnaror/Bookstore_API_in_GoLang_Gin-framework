@@ -1,22 +1,15 @@
-{{ define "content" }}
-<h1 class="mt-4">{{ if .book.ID }}Edit{{ else }}Add{{ end }} Book</h1>
-<form method="POST" action="/book{{ if .book.ID }}/{{ .book.ID }}{{ end }}">
-    <div class="form-group">
-        <label>Title</label>
-        <input type="text" class="form-control" name="title" value="{{ .book.Title }}">
-    </div>
-    <div class="form-group">
-        <label>Author</label>
-        <input type="text" class="form-control" name="author" value="{{ .book.Author }}">
-    </div>
-    <div class="form-group">
-        <label>Publish Date</label>
-        <input type="date" class="form-control" name="publish_date" value="{{ .book.PublishDate.Format "2006-01-02" }}">
-    </div>
-    <div class="form-group">
-        <label>Description</label>
-        <textarea class="form-control" name="description">{{ .book.Description }}</textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">{{ if .book.ID }}Update{{ else }}Add{{ end }} Book</button>
-</form>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <p>Welcome to the admin panel!</p>
+    <a href="/books">View Books</a>
+    <a href="/books/new">Add New Book</a>
+    <!-- Add more admin functionalities as needed -->
+</body>
+</html>
