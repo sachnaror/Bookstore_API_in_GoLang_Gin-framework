@@ -38,43 +38,54 @@ go run main.go
 
 5.	Open your browser and visit http://localhost:8080 to see the magic happen! 🎩✨
 
-📚 API Endpoints
+## 📚 API Endpoints
 
-1. Get All Books 📖
+### 1. Get All Books 📖
 
-	•	Endpoint: GET /books
-	•	Description: Retrieves a list of all books. No, we don’t have Harry Potter… yet. 🧙‍♂️
+- **Endpoint:** `GET /books`
+- **Description:** Retrieves a list of all books. No, we don’t have *Harry Potter*… yet. 🧙‍♂️
 
-2. Get a Specific Book 📘
+---
 
-	•	Endpoint: GET /books/:id
-	•	Description: Retrieves a book by its ID. A great way to find that one book you loved but forgot the title of!
+### 2. Get a Specific Book 📘
 
-3. Create a New Book 🆕
+- **Endpoint:** `GET /books/:id`
+- **Description:** Retrieves a book by its ID. A great way to find that one book you loved but forgot the title of!
 
-	•	Endpoint: POST /books
-	•	Description: Adds a new book to the database. Finally, a chance to write that bestseller you’ve always dreamed of!
+---
 
-4. Edit an Existing Book ✏️
+### 3. Create a New Book 🆕
 
-	•	Endpoint: PUT /books/:id
-	•	Description: Updates an existing book. Because sometimes, even books need a makeover! 💅
+- **Endpoint:** `POST /books`
+- **Description:** Adds a new book to the database. Finally, a chance to write that bestseller you’ve always dreamed of!
 
-5. Delete a Book 🗑️
+---
 
-	•	Endpoint: DELETE /books/:id
-	•	Description: Removes a book from the database. Out with the old, in with the new!
+### 4. Edit an Existing Book ✏️
 
-🔧 Requirements
+- **Endpoint:** `PUT /books/:id`
+- **Description:** Updates an existing book. Because sometimes, even books need a makeover! 💅
 
-	•	Go (1.15 or later)
-	•	A compatible database (like MySQL) because storing books on a cloud is so last year! ☁️📦
+---
 
-💡 Tips for Success
+### 5. Delete a Book 🗑️
 
-	•	Make sure your books have catchy titles. No one wants to read “Book #4567”! 📚😴
-	•	Remember to update your book details; even books deserve a second chance! ✨
+- **Endpoint:** `DELETE /books/:id`
+- **Description:** Removes a book from the database. Out with the old, in with the new!
 
+---
+
+## 🔧 Requirements
+
+- **Go:** Version 1.15 or later
+- **Database:** A compatible database (like MySQL) because storing books in the cloud is so last year! ☁️📦
+
+---
+
+## 💡 Tips for Success
+
+- Make sure your books have catchy titles. No one wants to read “Book #4567”! 📚😴
+- Remember to update your book details; even books deserve a second chance! ✨
 🤖 Contributing
 
 Want to help? Fantastic! Just fork the repo, create a branch, and submit a pull request. Let’s make this API the best it can be (no pressure, though)! 🎉
