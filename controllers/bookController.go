@@ -3,6 +3,7 @@ package controllers
 import (
 	"bookstore/db"
 	"database/sql"
+	"encoding/json"
 	"log"
 	"net/http"
 	"strconv"
@@ -23,27 +24,32 @@ type Book struct {
 func GetBooks(c *gin.Context) {
 	rows, err := db.DB.Query("SELECT id, title, author, publish_date, description FROM books")
 	if err != nil {
-		log.Printf("Error fetching books: %v", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not fetch books"})
 		return
 	}
 	defer rows.Close()
 
-	var books []Book
+	var books []Book // Use the defined Book struct here
 
 	for rows.Next() {
-		var book Book
+		var book Book // Use the same struct type for each book
 		if err := rows.Scan(&book.ID, &book.Title, &book.Author, &book.PublishDate, &book.Description); err != nil {
-			log.Printf("Error scanning book: %v", err)
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not scan book"})
 			return
 		}
-		books = append(books, book)
+		books = append(books, book) // Append the book to the slice
 	}
 
-	c.JSON(http.StatusOK, books)
-}
+	// Beautify JSON response
+	prettyJSON, err := json.MarshalIndent(books, "", "  ")
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not generate JSON"})
+		return
+	}
 
+	// Set the Content-Type header and return the pretty JSON
+	c.Data(http.StatusOK, "application/json", prettyJSON) // Send the pretty JSON response
+}
 // GetBook handles the GET request to retrieve a specific book by ID.
 func GetBook(c *gin.Context) {
 	id := c.Param("id")
