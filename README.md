@@ -2,6 +2,35 @@
 
 Welcome to the **Bookstore API**! Here, Bookstore API (in GoLang using Gin framework): you can manage your literary desires, from adding, edit, delete, deactivate the books to updating your favorite library. Get ready to unleash the power of books!
 
+```
+
+├── bookstore/
+│   ├── go.mod
+│   ├── go.sum
+│   ├── README.md
+│   ├── .env
+│   ├── books.db
+│   ├── main.go
+│   ├── models/
+│   │   └── book.go
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   ├── db/
+│   │   ├── database.go
+│   │   └── seed.go
+│   ├── templates/
+│   │   ├── home.html
+│   │   ├── admin.html
+│   │   └── layout.html
+│   ├── controllers/
+│   │   └── bookController.go
+│   ├── routes/
+│   │   └── routes.go
+
+```
+
+
 ## 🚀 Getting Started
 
 Follow these simple steps to get started:
@@ -82,27 +111,5 @@ go run main.go
 
 ---
 
-## 💡 Tips for Success
+<img width="505" alt="image" src="https://github.com/user-attachments/assets/53c144d0-af7d-4d6a-88d5-f9fd7a4e8890">
 
-- Make sure your books have catchy titles. No one wants to read “Book #4567”! 📚😴
-- Remember to update your book details; even books deserve a second chance! ✨
-🤖 Contributing
-
-Want to help? Fantastic! Just fork the repo, create a branch, and submit a pull request. Let’s make this API the best it can be (no pressure, though)! 🎉
-
-🤔 Questions?
-
-If you have any questions or run into any issues, feel free to reach out. Just don’t ask me about the ending of Game of Thrones—I’m still recovering! 😅
-
-📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Happy coding! 🎉✨📖
-
-
-### Breakdown of Sections:
-
-- **Icons:** Used to make the document more visually appealing and fun.
-- **Humor:** Light-hearted comments throughout to keep the reader engaged.
-- **Clear Instructions:** Step-by-step to help users set up the project easily.
